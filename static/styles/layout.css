@@ -1,0 +1,109 @@
+/* GENERAL */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%; /* 10px */
+	font-family: "Arial";
+	font-weight: 400;
+	letter-spacing: 0.2rem;
+}
+
+main {
+	padding: 5vh;
+	height: auto;
+	width: 900px;
+	margin: auto;
+}
+
+/* NAVBAR */
+#navbar {
+	height: 10vh;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	font-size: 2.5rem;
+	background-color: lightgrey;
+	color: black;
+}
+
+#navbar div {
+	padding: 10px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#navbar a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#navbar a:hover {
+	font-weight: 600;
+}
+
+#navbar-home,
+#navbar-myrecipes,
+#navbar-register,
+#navbar-login {
+	flex-basis: 12.5%;
+}
+
+#navbar-title {
+	flex-basis: 50%;
+	font-size: 4rem;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: calc(900px + 10vh)) {
+	#navbar {
+		flex-wrap: wrap;
+		height: 20vh;
+		font-size: 2.25rem;
+	}
+
+	#navbar div {
+		height: 10vh;
+	}
+
+	#navbar div:not(#navbar-title) {
+		flex-basis: 25%;
+	}
+
+	#navbar-title {
+		flex-basis: 100%;
+		order: -1;
+		width: 100vw;
+		margin: auto;
+		border-bottom: 1px solid darkgrey;
+	}
+
+	main {
+		padding: 3vh;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: calc(600px + 6vh)) {
+	#navbar {
+		flex-wrap: wrap;
+		height: 15vh;
+		font-size: 2rem;
+	}
+
+	#navbar div {
+		height: 7.5vh;
+	}
+
+	main {
+		padding: 2vh;
+	}
+}

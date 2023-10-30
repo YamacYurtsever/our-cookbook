@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<link href="/static/styles/register-login.css" rel="stylesheet" />
+{% endblock %}
+
+{% block main %}
+<form action="/register" method="post" autocomplete="off">
+	<input required name="username" placeholder="Username" type="text" />
+	<input required name="password" placeholder="Password" type="password" />
+	<input required name="confirmation" placeholder="Confirmation" type="password" />
+	<button type="submit">Register</button>
+</form>
+{% endblock %}

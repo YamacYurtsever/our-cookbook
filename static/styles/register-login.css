@@ -1,0 +1,22 @@
+/* REGISTER & LOGIN */
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: calc(40vh - 17.5vh);
+}
+
+form input {
+	height: 5vh;
+	width: 300px;
+	margin-bottom: 5vh;
+	padding: 10px;
+	font-size: 2rem;
+	border-radius: 5px;
+}
+
+form button {
+	height: 5vh;
+	width: 150px;
+	font-size: 2rem;
+}

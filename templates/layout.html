@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, width=device-width" />
+
+	<script src="/static/scripts/layout.js"></script>
+	{% block js %}
+	{% endblock %}
+
+	<link href="/static/styles/layout.css" rel="stylesheet" />
+	{% block css %}
+	{% endblock %}
+
+	<title>Our Cookbook</title>
+</head>
+
+<body>
+	<header id="navbar">
+		<div id="navbar-home"><a href="/">Home</a></div>
+		<div id="navbar-myrecipes"><a href="/add">Add Recipe</a></div>
+		<div id="navbar-title">
+			<p>Our Cookbook</p>
+		</div>
+		{% if session["user_id"] %}
+		<div id="navbar-register"></div>
+		<div id="navbar-login"><a href="/logout">Log Out</a></div>
+		{% else %}
+		<div id="navbar-register"><a href="/register">Register</a></div>
+		<div id="navbar-login"><a href="/login">Log In</a></div>
+		{% endif %}
+	</header>
+
+	<main>{% block main %}{% endblock %}</main>
+</body>
+
+</html>

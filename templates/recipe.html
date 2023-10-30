@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block js %}
+<script src="/static/scripts/recipe.js"></script>
+{% endblock %}
+
+{% block css %}
+<link href="/static/styles/recipe.css" rel="stylesheet" />
+<style>
+	#recipe-image {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)),
+		url("{{ recipeDetails[0]['image'] }}");
+		background-size: cover;
+		background-position: center;
+	}
+</style>
+{% endblock %}
+
+{% block main %}
+<!-- RECIPE DETAILS -->
+<div id="recipe-image">
+	<p id="title">{{ recipeDetails[0]["title"] }}</p>
+	<div id="type-cousine">
+		{% if recipeDetails[0]['type'] %}
+		<div>
+			<p id="type">{{ recipeDetails[0]["type"] }}</p>
+		</div>
+		{% endif %} {% if recipeDetails[0]['type'] %}
+		<div>
+			<p id="cousine">{{ recipeDetails[0]["cousine"] }}</p>
+		</div>
+		{% endif %}
+	</div>
+	<div id="date-time">
+		<p>{{ recipeDetails[0]["username"] }}</p>
+		<p>{{ recipeDetails[0]["date"] }}</p>
+		<p>{{ recipeDetails[0]["time"] }}</p>
+	</div>
+	{% if isAuthor %}
+	<form method="get" action="/delete">
+		<input hidden name="recipeId" value="{{ recipeId }}" />
+		<button id="delete-button" type="submit">DELETE</button>
+	</form>
+	<form method="get" action="/edit">
+		<input hidden name="recipeId" value="{{ recipeId }}" />
+		<button id="edit-button" type="submit">EDIT</button>
+	</form>
+	{% endif %}
+</div>
+
+<!-- INGREDIENTS -->
+<div id="ingredients-head">
+	<h2>Ingredients</h2>
+	<div id="weight">
+		<p>Grams:</p>
+		<input class="changeable" value="{{ recipeDetails[0]['weight'] }}" />
+	</div>
+</div>
+<div id="ingredients-body">
+	{% for ingredient in recipeIngredients %}
+	<div class="ingredient">
+		<div class="ingredient-amount-measurment">
+			<div><input class="amount changeable" value="{{ ingredient['amount'] }}" /></div>
+			<div>{{ ingredient["measurement"] }}</div>
+		</div>
+		<div class="ingredient-description">{{ ingredient["description"] }}</div>
+	</div>
+	{% endfor %}
+</div>
+
+<!-- STEPS -->
+<h2>Steps</h2>
+<div id="steps-container">
+	{% for step in recipeSteps %}
+	<div class="step">
+		<div class="step-num">{{ step["number"] }}.</div>
+		<div class="step-description">{{ step["description"] }}</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

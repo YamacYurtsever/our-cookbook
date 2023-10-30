@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block js %}
+<script src="/static/scripts/index.js"></script>
+{% endblock %}
+
+{% block css %}
+<link href="/static/styles/index.css" rel="stylesheet" />
+{% endblock %}
+
+{% block main %}
+<form id="search" autocomplete="off">
+	<select name="t" id="searchType">
+		<option selected>Recipe</option>
+		<option>Author</option>
+	</select>
+	<input placeholder="Search" name="q" id="searchQuery" />
+	<!-- <button>Filters</button> -->
+</form>
+
+<div id="recipes">
+	{% for recipe in recipes %}
+	<div class="recipe">
+		<div class="container-1">
+			<img src="{{ recipe['image'] }}" alt="Recipe Image" />
+		</div>
+		<div class="container-2">
+			<div>
+				<h3>{{ recipe["title"] }}</h3>
+			</div>
+			<div>
+				{% if recipe["type"] %}
+				<div class="type">{{ recipe["type"] }}</div>
+				{% endif %} {% if recipe["cousine"] %}
+				<div class="cousine">{{ recipe["cousine"] }}</div>
+				{% endif %}
+			</div>
+		</div>
+		<div class="container-3">
+			<p>{{ recipe["username"] }}</p>
+			<p>{{ recipe["date"] }}</p>
+		</div>
+
+		<!-- OPEN RECIPE -->
+		<form id="recipe-form" method="post">
+			<input hidden name="recipe-id" value="{{ recipe['recipeId'] }}" />
+		</form>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

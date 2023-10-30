@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block css %}
+<link href="/static/styles/error.css" rel="stylesheet" />
+{% endblock %}
+{% block main %}
+<div id="error-container">
+	<h1>Error: {{ error }}</h1>
+</div>
+{% endblock %}

@@ -1,0 +1,198 @@
+/* GENERAL */
+
+main > *:not(:last-child) {
+	margin-bottom: 5vh;
+}
+
+/* RECIPE DETAILS */
+
+#recipe-image {
+	position: relative;
+	height: 30vh;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2vh;
+	text-align: center;
+	color: white;
+}
+
+#title {
+	font-size: 5.5rem;
+	-webkit-text-stroke: 2px black;
+	font-weight: 600;
+}
+
+#type-cousine {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	gap: 25px;
+	font-weight: 600;
+	font-size: 3.5rem;
+	-webkit-text-stroke: 1.5px black;
+}
+
+#type-cousine > div {
+	flex-basis: 50%;
+}
+
+#type {
+	color: thistle;
+	text-align: right;
+}
+
+#cousine {
+	color: lightgreen;
+	text-align: left;
+}
+
+#date-time {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	-webkit-text-stroke: 0.1px black;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+}
+
+button {
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+}
+
+#delete-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#edit-button {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+/* INGREDIENTS */
+
+h2 {
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+#ingredients-head {
+	height: auto;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+#weight {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	border: 1px solid black;
+	border-radius: 8px;
+	font-size: 2rem;
+	padding: 5px;
+}
+
+#weight p {
+	margin-right: 2px;
+	letter-spacing: 2px;
+}
+
+#weight input {
+	border: none;
+	width: 50px;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+#ingredients-body {
+	display: flex;
+	flex-direction: column;
+}
+
+.ingredient {
+	height: 5vh;
+	width: 100%;
+	font-size: 2rem;
+	display: flex;
+}
+
+.ingredient > div {
+	border: 1px solid black;
+	text-align: center;
+	padding: calc(2.5vh - 1rem);
+}
+
+.ingredient-amount-measurment {
+	flex-basis: 25%;
+	background-color: lightgrey;
+	display: flex;
+	gap: 5%;
+}
+
+.ingredient-amount-measurment > div {
+	flex-basis: 47.5%;
+}
+
+.ingredient-amount-measurment > div:nth-child(1) {
+	text-align: right;
+}
+
+.ingredient-amount-measurment > div:nth-child(2) {
+	text-align: left;
+}
+
+.ingredient-description {
+	flex-basis: 75%;
+}
+
+.amount {
+	width: 50px;
+	font-size: 2rem;
+	font-weight: 600;
+	text-align: center;
+	border: none;
+	background-color: lightgrey;
+}
+
+/* STEPS */
+
+.step {
+	max-width: 100%;
+	min-height: 5vh;
+	overflow: hidden;
+	display: flex;
+	font-size: 2rem;
+}
+
+.step > div {
+	border: 1px solid black;
+	text-align: center;
+	padding: calc(2.5vh - 1rem);
+}
+
+.step-num {
+	flex-basis: 10%;
+	background-color: lightgrey;
+}
+
+.step-description {
+	flex-basis: 90%;
+	text-wrap: wrap;
+}

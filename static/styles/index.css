@@ -1,0 +1,130 @@
+/* SEARCH */
+#search {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2.5vh;
+	height: 5vh;
+	gap: 3%;
+}
+
+#search * {
+	font-size: 1.6rem;
+	height: 100%;
+}
+
+#search select,
+#search button {
+	flex-basis: 12.5%;
+}
+
+#search input {
+	flex-grow: 1;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+/* RECIPES */
+#recipes {
+	margin: auto;
+	height: 72.5vh;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 7.5px;
+	overflow-y: scroll;
+}
+
+.recipe {
+	width: 100%;
+	height: calc((100% - (4 * 7.5px)) / 5);
+	background-color: lightgrey;
+	border: 1px solid black;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 7.5px;
+	gap: 7.5px;
+}
+
+.recipe:not(:last-child) {
+	margin-bottom: 7.5px;
+}
+
+.recipe:hover {
+	cursor: pointer;
+	border: 2px solid black;
+}
+
+.container-1,
+.container-2,
+.container-3 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.container-1,
+.container-3 {
+	flex-basis: 20%;
+}
+
+.container-2 {
+	flex-basis: 60%;
+}
+
+.container-1 img {
+	height: 100%;
+	aspect-ratio: 1 / 1;
+	border: 2px solid black;
+	border-radius: 30%;
+	object-fit: fill;
+}
+
+h3 {
+	font-size: 1.8rem;
+	letter-spacing: 5px;
+}
+
+.container-2 > div {
+	display: flex;
+	justify-content: space-between;
+	gap: 15px;
+}
+
+.type,
+.cousine {
+	border: 1px solid black;
+	padding: 3.75px;
+	border-radius: 5px;
+}
+
+.type {
+	background-color: thistle;
+}
+
+.cousine {
+	background-color: lightgreen;
+}
+
+.container-3 p:first-child {
+	font-size: 1.8rem;
+	font-style: italic;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: calc(900px + 10vh)) {
+	#recipes {
+		height: 66.5vh;
+	}
+}
+
+@media only screen and (max-width: calc(600px + 6vh)) {
+	#recipes {
+		height: 73.5vh;
+	}
+}
