@@ -1,7 +1,7 @@
-from cs50 import SQL
 from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
 from datetime import datetime
+import sqlite3
 
 from account import register_user, login_user, logout_user, login_required
 
@@ -11,7 +11,9 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-db = SQL("sqlite:///project.db")
+conn = sqlite3.connect('project.db')
+db = conn.cursor()
+
 
 types = ["Sandwich", "Soup", "Pasta", "Pizza", "Salad", "Dessert", "Beverage", "Appetizer", "Fry",
          "Grill", "Snack", "Roast", "Stew", "Sauce", "Bread", "Rice", "Noodle", "Burger", "Taco", "Wrap", "Dip"]
