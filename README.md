@@ -54,22 +54,26 @@ The style sheets consist of:
 
 - **Input Validation**: Various input validations are implemented to ensure data integrity and prevent errors due to incorrect input formats.
 
-### Possible New Features
+### Potential Features
 
 - **Common Features**: 
-    - Search Filter: type, cousine, and ingredients
+    - Search Filter: type, cousine, ingredients
     - Ratings, reviews, comments
     - Saving recipes
 
-- **Nutritional Values**: An API can be used to fetch the nutritional values of the ingredients in the recipes - such as the total calories and vitamins in each recipe.
+- **Using Public APIs**:
+    - *Prices*: Using public APIs of scraped supermarket data, the app can automatically estimate the price of each recipe
+    - *Nutrition*: An API can be used to fetch the nutritional values and calories of the ingredients in the recipes
 
-- **Prices**: Using public APIs of scraped supermarket data, the app can automatically estimate the price of each recipe
+- **My Fridge**: 
+    - There could be page where the user enters the food items in their fridge and the app automatically shows the user all of the recipes in the database that they can make with the ingredients that they have
+    - Using this, when the user views a recipe, the app can also show all of the necessary ingredients that the user doesn't already have
+    - *Shopping List*: The user can add multiple recipes to their meal and the app generates a shopping list for the recipes, excluding the ingredients already in the fridge
 
-- **My Fridge**: There could be page where the user enters the food items in their fridge and the app automatically shows the user all of the recipes in the database that they can make with the ingredients that they have. Using this, when the user views a recipe, the app can also show all of the necessary ingredients that the user doesn't already have.
+- **Gamify**: 
+    - Rating system can be utilized to have rankings of top users and a chef of the week
 
-- **Shopping List**: The user can add multiple recipes to their meal and the app generates a shopping list for the recipes (potentially excluding the ingredients already in the fridge)
-
-- **Gamify**: The app could have a rating system that can be utilized to have rankings of top users and maybe something like a chef of the week
-
-- **TikTok??**: The idea is that food content is really big on all social media 
-platforms but there are no apps that focus on short form food content. The app could have a twitter like feed where each new recipe added is showsn and the users can follow other users and have a personal followed feed where they can see the recipes of people that they follow.
+- **TikTok??**: 
+    - The idea is that food content is really big on all social media 
+platforms but there are no apps that focus on short form food content
+    - The app could have a twitter like feed where each new recipe added is shown and the users can follow other users and have a personal feed of the people that they follow.
