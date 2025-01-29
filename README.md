@@ -1,4 +1,4 @@
-# Recipe Web Application
+# Our Cookbook
 
 #### Video Demo: <https://www.youtube.com/watch?v=idmLhJUQ-2w&ab_channel=Yama%C3%A7Yurtsever>
 
